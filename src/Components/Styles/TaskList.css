@@ -1,0 +1,17 @@
+*{
+  box-sizing: border-box;
+}
+
+.task-list {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.no-task{
+  align-self: center;
+  color: #fff;
+}
