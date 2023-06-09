@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --card-height: calc((100vh - 80px) / 5);
+}
+
+.card-container {
+  position: relative;
+  height: var(--card-height);
+  background: #e6e6fa;
+  border-radius: 10px;
+  min-width: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  z-index: 20;
+  transition: all 1s ease-in-out;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 15px;
+}
+
+.title {
+  color: #000;
+  text-transform: capitalize;
+}
+
+.description {
+  color: #888;
+}
+
+.actions {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.actions button{
+  background: #fff;
+  border-radius: 2px;
+  padding: 3px;
+  border: none;
+}
+
+.toggleDescription {
+  z-index: 30;
+  height: calc(var(--card-height) * 3);
+}
+
+@media screen and (min-width: 480px) {
+  .card-container {
+    height: calc(var(--card-height) * 2) ;
+  }
+
+  .toggleDescription {
+    z-index: 30;
+    height: calc(var(--card-height) * 3);
+    overflow-y: auto;
+  }
+}

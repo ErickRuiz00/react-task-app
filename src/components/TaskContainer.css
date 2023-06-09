@@ -1,0 +1,21 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.task-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, calc((100vh - 80px) / 5));
+  gap: 10px;
+  padding: 10px 15px;
+  min-height: calc(100vh - 80px);
+}
+
+@media screen and (min-width:480px) {
+  .task-container{
+    grid-template-rows: repeat(auto-fit, calc((100vh - 80px) / 2.5));
+    grid-template-rows: none;
+  }
+}
